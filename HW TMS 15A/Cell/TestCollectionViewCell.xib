@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TestCollectionViewCell" customModule="HW_TMS_15A" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="475"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="475"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q2a-Aa-QJE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="375" id="t2b-Dl-f7t"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9NE-NN-R0d">
+                        <rect key="frame" x="0.0" y="375" width="225" height="79.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-gr-GIt">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="79.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="likeButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="JR7-oi-bLK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-st-SLD">
+                                <rect key="frame" x="75" y="0.0" width="75" height="79.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="commentAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="gnQ-xS-QaM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtm-wU-2Cv">
+                                <rect key="frame" x="150" y="0.0" width="75" height="79.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="shateAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="VnP-F0-LWO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZC-ka-9Ai">
+                        <rect key="frame" x="0.0" y="454.5" width="375" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="BZC-ka-9Ai" secondAttribute="trailing" id="3ng-uF-DHu"/>
+                <constraint firstAttribute="bottom" secondItem="BZC-ka-9Ai" secondAttribute="bottom" id="CxO-Hv-kuh"/>
+                <constraint firstAttribute="trailing" secondItem="q2a-Aa-QJE" secondAttribute="trailing" id="RJT-p5-ngN"/>
+                <constraint firstItem="BZC-ka-9Ai" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xsx-Jj-feb"/>
+                <constraint firstAttribute="trailing" secondItem="9NE-NN-R0d" secondAttribute="trailing" constant="150" id="ZqC-SW-W6l"/>
+                <constraint firstItem="BZC-ka-9Ai" firstAttribute="top" secondItem="9NE-NN-R0d" secondAttribute="bottom" id="kFQ-OK-rta"/>
+                <constraint firstItem="9NE-NN-R0d" firstAttribute="top" secondItem="q2a-Aa-QJE" secondAttribute="bottom" id="keR-XD-uUm"/>
+                <constraint firstItem="q2a-Aa-QJE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o6L-uM-cnb"/>
+                <constraint firstItem="9NE-NN-R0d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="q3K-YD-aXb"/>
+                <constraint firstItem="q2a-Aa-QJE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u6K-fw-UWV"/>
+            </constraints>
+            <size key="customSize" width="226" height="238"/>
+            <connections>
+                <outlet property="commentLabel" destination="BZC-ka-9Ai" id="FnF-So-erS"/>
+                <outlet property="likeButton" destination="i0z-gr-GIt" id="GaC-8Z-2TU"/>
+                <outlet property="setupWithPhoto" destination="q2a-Aa-QJE" id="wLp-nU-mb4"/>
+            </connections>
+            <point key="canvasLocation" x="264.49275362318843" y="176.45089285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
