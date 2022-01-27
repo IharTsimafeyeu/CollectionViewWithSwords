@@ -1,20 +1,9 @@
-//
-//  AuthViewController.swift
-//  HW TMS 15A
-//
-//  Created by Игорь Тимофеев on 11.11.21.
-//
-
 import UIKit
 
-class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+  
     @IBAction func loginButtonAction(_ sender: Any) {
         if let name = nameTextField.text, !name.isEmpty {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -1,13 +1,6 @@
-//
-//  ViewController.swift
-//  HW TMS 15A
-//
-//  Created by Игорь Тимофеев on 10.11.21.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,12 +25,12 @@ class ViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationItem.title = " "
+        navigationItem.title = " "
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = "Мой профиль"
+        navigationItem.title = "Мой профиль"
     }
     
 }
@@ -58,7 +51,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var itemPerRow: CGFloat = 3
+        let itemPerRow: CGFloat = 3
         let paddingWidth = 20 * (itemPerRow + 1)
         let widthForItem = (collectionView.frame.width - paddingWidth) / 3.2
         return CGSize(width: widthForItem, height: widthForItem)

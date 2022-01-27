@@ -1,10 +1,3 @@
-//
-//  TestCollectionViewCell.swift
-//  HW TMS 15A
-//
-//  Created by Игорь Тимофеев on 10.11.21.
-//
-
 import UIKit
 
 protocol TestCollectionViewCellDelegate: AnyObject {
@@ -51,7 +44,7 @@ final class TestCollectionViewCell: UICollectionViewCell {
         likeButton.setImage(buttonLikeImage, for: .normal)
     }
 }
-// MARK: - Buttons Actions
+// MARK: - Buttons
 extension TestCollectionViewCell {
     @IBAction func likeButtonAction(_ sender: Any) {
         delegate?.likeOrDislike(photoName: photoName)

@@ -1,10 +1,3 @@
-//
-//  SecondViewController.swift
-//  HW TMS 15A
-//
-//  Created by Игорь Тимофеев on 10.11.21.
-//
-
 import UIKit
 
 final class SecondViewController: UIViewController {
@@ -29,9 +22,7 @@ final class SecondViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "TestCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: TestCollectionViewCell.identifier)
         navigationItem.title = "Публикации"
-        
     }
-    
 }
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -42,16 +33,18 @@ extension SecondViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TestCollectionViewCell.identifier, for: indexPath) as! TestCollectionViewCell
-        cell.setupWith(model: dataSource[indexPath.row])
-        cell.delegate = self
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TestCollectionViewCell.identifier, for: indexPath) as? TestCollectionViewCell {
+            cell.setupWith(model: dataSource[indexPath.row])
+            cell.delegate = self
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemPerRow: CGFloat = 1
         let paddingWidth = 20 * (itemPerRow + 1)
